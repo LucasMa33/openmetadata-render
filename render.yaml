@@ -1,0 +1,19 @@
+services:
+  - type: web
+    name: openmetadata
+    env: docker
+    plan: free
+    autoDeploy: true
+    envVars:
+      - key: OPENMETADATA_DATABASE_HOST
+        value: dpg-cvmi2euuk2gs73d2ptl0-a
+      - key: OPENMETADATA_DATABASE_PORT
+        value: 5432
+      - key: OPENMETADATA_DATABASE_USER
+        value: openmetadata_db_4kl6_user
+      - key: OPENMETADATA_DATABASE_PASSWORD
+        value: BBZSXrRXwyWJHlvXc84uoAjY00FA6wXS
+      - key: OPENMETADATA_DATABASE_NAME
+        value: postgresql://openmetadata_db_4kl6_user:BBZSXrRXwyWJHlvXc84uoAjY00FA6wXS@dpg-cvmi2euuk2gs73d2ptl0-a.oregon-postgres.render.com/openmetadata_db_4kl6
+      - key: AUTHENTICATION_PROVIDER
+        value: no-auth
